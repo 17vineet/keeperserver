@@ -16,6 +16,9 @@ app.use(cors()) ;
 // https://stackoverflow.com/questions/46024363/what-does-app-usecors-do
 
 app.use('/notes',noteRoutes) ;
+app.get('/',(req,res)=>{
+    res.send('App is running') ;
+})
 
 const PORT = process.env.PORT || 7788 ;
 
